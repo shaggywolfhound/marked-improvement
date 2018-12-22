@@ -3,7 +3,7 @@
     --MIYellow: #fffc1b;
     --MISilver: #bfbdbe;
 }
-/*font*/
+/*fonts*/
 /*todo sort otf fonts*/
 @font-face {
     font-family: "arkitech light";
@@ -21,13 +21,14 @@
             /*url("../fonts/Arkitech Medium.otf") format("opentype"),*/
             url("../fonts/Arkitech Medium.svg") format("svg");
 }
-
+/* general css */
 body {
-    font-family: "arkitech light";
+    font-family: "arkitech light", "Droid Sans", SansSerif, serif;
     background: url("../assets/carbon.jpg") repeat;
-    background-size: 100%;
+    background-size: 50%;
     width: 100%;
 }
+/*header*/
 #header {
     width: 100%;
     background: #000;
@@ -49,6 +50,7 @@ body {
     float: right;
     text-align: right;
     padding: 10px;
+    margin-top: 25px;
 }
 #header .container .detail span {
     display: block;
@@ -61,6 +63,7 @@ body {
 #header .container .detail span a:hover {
     color: var(--MIYellow);
 }
+/*Navigation*/
 #nav {
     width: 100%;
     background: var(--MISilver);
@@ -91,6 +94,7 @@ body {
     color: var(--MIYellow);
     cursor: pointer;
 }
+/*content*/
 #content {
     max-width: 1200px;
     width: 100%;
