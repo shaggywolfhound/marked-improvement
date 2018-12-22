@@ -1,0 +1,100 @@
+/* variables */
+:root {
+    --MIYellow: #fffc1b;
+    --MISilver: #bfbdbe;
+}
+/*font*/
+/*todo sort otf fonts*/
+@font-face {
+    font-family: "arkitech light";
+    src: url("../fonts/Arkitech Light.eot");
+    src:
+            url("../fonts/arkitech_light-webfont.woff") format("woff"),
+            /*url("../fonts/Arkitech Light.otf") format("opentype"),*/
+            url("../fonts/Arkitech Light.svg") format("svg");
+}
+@font-face {
+    font-family: "arkitech medium";
+    src: url("../fonts/Arkitech Medium.eot");
+    src:
+            url("../fonts/arkitech_medium-webfont.woff") format("woff"),
+            /*url("../fonts/Arkitech Medium.otf") format("opentype"),*/
+            url("../fonts/Arkitech Medium.svg") format("svg");
+}
+
+body {
+    font-family: "arkitech light";
+    background: url("../assets/carbon.jpg") repeat;
+    background-size: 100%;
+    width: 100%;
+}
+#header {
+    width: 100%;
+    background: #000;
+}
+#header .container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#header .container img {
+    display: inline-block;
+    width: 300px;
+    padding: 10px;
+    cursor: pointer;
+}
+#header .container .detail {
+    display: inline-block;
+    color: var(--MISilver);
+    width: 50%;
+    float: right;
+    text-align: right;
+    padding: 10px;
+}
+#header .container .detail span {
+    display: block;
+    width: 100%;
+}
+#header .container .detail span a {
+    color: var(--MISilver);
+    text-decoration: none;
+}
+#header .container .detail span a:hover {
+    color: var(--MIYellow);
+}
+#nav {
+    width: 100%;
+    background: var(--MISilver);
+}
+#nav ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+}
+#nav ul li {
+    display: inline-block;
+    height: 40px;
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    background: #fff;
+    line-height: 40px;
+}
+
+#nav ul li.current {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#nav ul li:hover {
+    background: #000;
+    color: var(--MIYellow);
+    cursor: pointer;
+}
+#content {
+    max-width: 1200px;
+    width: 100%;
+    background: #fff;
+    margin: 10px auto;
+    height: 2000px;
+}
