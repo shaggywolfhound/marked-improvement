@@ -117,7 +117,21 @@ body {
     background: #fff;
     margin: 10px auto;
     height: 1000px;
-    /*box-shadow: 0px 0px 80px 0px var(--MIYellow);*/
+}
+
+@media screen and (max-width: 1400px) {
+    .img-burn {
+        background: radial-gradient(var(--MIYellow) 60%, black 80%),
+        url("../assets/carbon-2.jpg") repeat;
+        background-blend-mode: screen, difference, lighten;
+    }
+}
+@media screen and (max-width: 1260px) {
+    .img-burn {
+        background: radial-gradient(var(--MIYellow) 40%, black 80%),
+        url("../assets/carbon-2.jpg") repeat;
+        background-blend-mode: screen, difference, lighten;
+    }
 }
 
 /*resposnsive*/
