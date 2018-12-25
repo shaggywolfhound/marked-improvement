@@ -26,15 +26,15 @@
 body {
     font-family: "arkitech light", "Droid Sans", SansSerif, serif;
     background:
-            radial-gradient(var(--MIYellow) 10%, black 80%),
+            radial-gradient(circle farthest-side, var(--MIYellow) 10%, black 80%),
             url("../assets/carbon-2.jpg") repeat;
     background-blend-mode: screen, difference, lighten;
 }
 .img-burn {
     background:
-            radial-gradient(var(--MIYellow) 10%, black 80%),
+            radial-gradient(var(--MIYellow)40%, black 90%),
             url("../assets/carbon-2.jpg") repeat;
-    background-blend-mode: screen, difference, lighten;
+    background-blend-mode: overlay, difference, lighten;
 
 }
 
@@ -121,16 +121,16 @@ body {
 
 @media screen and (max-width: 1400px) {
     .img-burn {
-        background: radial-gradient(var(--MIYellow) 60%, black 80%),
+        background: radial-gradient(var(--MIYellow) 50%, black 90%),
         url("../assets/carbon-2.jpg") repeat;
-        background-blend-mode: screen, difference, lighten;
+        background-blend-mode: overlay, difference, lighten;
     }
 }
 @media screen and (max-width: 1260px) {
     .img-burn {
-        background: radial-gradient(var(--MIYellow) 40%, black 80%),
+        background: radial-gradient(var(--MIYellow) 60%, black 90%),
         url("../assets/carbon-2.jpg") repeat;
-        background-blend-mode: screen, difference, lighten;
+        background-blend-mode: overlay, difference, lighten;
     }
 }
 
