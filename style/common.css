@@ -262,6 +262,7 @@ body {
 .image-container {
     list-style-type: none;
     display: grid;
+    grid-template-columns: 4fr 2fr 2fr 3fr 6fr;
 }
 .image-container .behind-image {
     width: 100px;
@@ -269,11 +270,18 @@ body {
     display: inline-block;
     background: var(--MIGold);
     border: 1px solid var(--MIGold);
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
 }
 .image-container li {
     display: inline-block;
 }
-.image-container img {
+.image-container .image {
+    /*width: 200px;*/
+    grid-row: 2 / span 4;
+    grid-column: 2 / span 3;
+}
+.image-container .image img {
     width: 200px;
 }
 
