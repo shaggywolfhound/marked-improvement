@@ -2,6 +2,7 @@
 :root {
     --MIYellow: #fffc1b;
     --MISilver: #bfbdbe;
+    --MIGold: #f6ce10;
 }
 
 /*fonts*/
@@ -25,23 +26,23 @@
 /* general css */
 body {
     font-family: "arkitech light", "Droid Sans", SansSerif, serif;
-    background:
+/*    background:
             radial-gradient(circle farthest-side, var(--MIYellow) 10%, black 80%),
             url("../assets/carbon-2.jpg") repeat;
-    background-blend-mode: screen, difference, lighten;
+    background-blend-mode: screen, difference, lighten;*/
 }
 .img-burn {
     background:
             radial-gradient(var(--MIYellow)40%, black 90%),
             url("../assets/carbon-2.jpg") repeat;
     background-blend-mode: overlay, difference, lighten;
-
 }
 
 /*header*/
 #header {
     width: 100%;
     background: #000;
+    overflow: auto;
 }
 #header .container{
     max-width: 1200px;
@@ -71,7 +72,8 @@ body {
     text-decoration: none;
 }
 #header .container .detail span a:hover {
-    color: var(--MIYellow);
+    color: var(--MISilver);
+    text-decoration: underline;
 }
 
 /*Navigation*/
@@ -109,13 +111,50 @@ body {
     cursor: pointer;
 }
 
+/*footer*/
+#footer {
+    width: 100%;
+    background: #000;
+}
+#footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    color: var(--MISilver);
+}
+#footer .footer-container > ul {
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+}
+#footer .footer-container > ul > li {
+    display: inline-block;
+    width: 33%;
+}
+#footer .footer-container > ul > li a {
+    color: var(--MIYellow);
+    text-decoration: none;
+}
+#footer .footer-container > ul > li a:hover {
+    color: var(--MISilver);
+    text-decoration: underline;
+}
+
+#footer .footer-column {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+}
 
 /*content*/
 #content {
     max-width: 1200px;
     width: 100%;
     background: #fff;
-    margin: 10px auto;
+    padding: 10px;
+    margin: 0 auto;
     height: 1000px;
 }
 
@@ -133,6 +172,21 @@ body {
         background-blend-mode: overlay, difference, lighten;
     }
 }
+
+/*contact-us*/
+#contact-us #map-container {
+    display: inline-block;
+    width: 590px;
+    height: 600px;
+    border: 1px solid black;
+}
+#contact-us .details-container {
+    display: inline-block;
+    width: 590px;
+    height: 600px;
+    border: 1px solid black;
+}
+
 
 /*resposnsive*/
 @media screen and (max-width: 1200px) {
@@ -203,3 +257,46 @@ body {
         font-size: 12px;
     }
 }
+
+/*image content*/
+.image-container {
+    list-style-type: none;
+    display: grid;
+}
+.image-container .behind-image {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background: var(--MIGold);
+    border: 1px solid var(--MIGold);
+}
+.image-container li {
+    display: inline-block;
+}
+.image-container img {
+    width: 200px;
+}
+
+
+/*rotating test area homepage*/
+/*
+h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--MIGold);
+    background: var(--MIGold);
+    float: left;
+}
+h1:after {
+    content: '';
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--MIGold);
+    background: var(--MIGold);
+    border-radius: 10px;
+}
+*/

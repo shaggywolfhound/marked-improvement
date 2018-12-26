@@ -1,8 +1,9 @@
 //load sections
 $(function(){
-    $('#nav').load('./nav/nav.html');
-    $('#header').load('./header/header.html');
-    $('#content').load('./pages/homepage.html');
+    $('#nav').load('./html/nav.html');
+    $('#header').load('./html/header.html');
+    $('#footer').load('./html/footer.html');
+    $('#content').load('./html/pages/homepage.html');
 });
 //todo convert to promise
 setTimeout(function(){
@@ -22,20 +23,20 @@ setTimeout(function(){
 
         setTimeout(function() {
             switch (navClass) {
-                case 'process':
-                    content.load('./pages/process.html');
+                case 'reviews':
+                    content.load('./html/pages/reviews.html');
                     break;
-                case 'system':
-                    content.load('./pages/system.html');
+                case 'gallery':
+                    content.load('./html/pages/gallery.html');
                     break;
                 case 'contact-us':
-                    content.load('./pages/contact-us.html');
+                    content.load('./html/pages/contact-us.html');
                     break;
                 case 'about-us':
-                    content.load('./pages/about-us.html');
+                    content.load('./html/pages/about-us.html');
                     break;
                 default:
-                    content.load('./pages/homepage.html');
+                    content.load('./html/pages/homepage.html');
             }
             content.removeClass('fadeOutDown');
             content.addClass('fadeInUp');
