@@ -5,14 +5,15 @@ $(function(){
     $('#footer').load('./html/footer.html');
     $('#content').load('./html/pages/homepage.html');
 });
+
 //todo convert to promise
 setTimeout(function(){
 
+//navigation
     $('#nav li.home').addClass('current');
 
     $('#nav li').on('click', function () {
         //todo add click on logo
-        console.log('menu');
         let navClass = $(this).attr('class');
         let content = $('#content');
 
@@ -20,23 +21,17 @@ setTimeout(function(){
         $('#nav li').removeClass('current');
         $(this).addClass('current');
 
-
         setTimeout(function() {
-            switch (navClass) {
-                case 'reviews':
-                    content.load('./html/pages/reviews.html');
-                    break;
-                case 'gallery':
-                    content.load('./html/pages/gallery.html');
-                    break;
-                case 'contact-us':
-                    content.load('./html/pages/contact-us.html');
-                    break;
-                case 'about-us':
-                    content.load('./html/pages/about-us.html');
-                    break;
-                default:
-                    content.load('./html/pages/homepage.html');
+            if (navClass.includes('reviews')){
+                content.load('./html/pages/reviews.html');
+            }else if(navClass.includes('gallery')){
+                content.load('./html/pages/gallery.html');
+            }else if(navClass.includes('contact-us')){
+                content.load('./html/pages/contact-us.html');
+            }else if(navClass.includes('\'about-us')){
+                content.load('./html/pages/about-us.html');
+            }else{
+                content.load('./html/pages/homepage.html');
             }
             content.removeClass('fadeOutDown');
             content.addClass('fadeInUp');
@@ -63,6 +58,13 @@ setTimeout(function(){
             }
         }
     });
+
+    //gallery load
+    const gallery = $('.gallery-content');
+    console.log(gallery);
+    if (gallery.length){
+        console.log('yay');
+    };
 
 },200);
 
