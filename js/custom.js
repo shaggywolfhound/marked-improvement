@@ -3,13 +3,13 @@ $(function(){
     $('#nav').load('./html/nav.html');
     $('#header').load('./html/header.html');
     $('#footer').load('./html/footer.html');
-    $('#content').load('./html/pages/homepage.html');
 });
 
 //todo convert to promise
 setTimeout(function(){
 
 //navigation
+    /*
     $('#nav li.home').addClass('current');
 
     $('#nav li').on('click', function () {
@@ -38,6 +38,7 @@ setTimeout(function(){
         },100);
     });
 
+    */
     /*mobile navigation*/
     let navButton = $('#mobile-nav');
     let nav = $('#nav ul');

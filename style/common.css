@@ -5,6 +5,7 @@
     --MIGold: #f6ce10;
 }
 
+
 /*fonts*/
 /*todo sort otf fonts*/
 @font-face {
@@ -26,17 +27,49 @@
 /* general css */
 body {
     font-family: "arkitech light", "Droid Sans", SansSerif, serif;
-/*    background:
-            radial-gradient(circle farthest-side, var(--MIYellow) 10%, black 80%),
-            url("../assets/carbon-2.jpg") repeat;
-    background-blend-mode: screen, difference, lighten;*/
 }
+h1 {
+    position: relative;
+    display: block;
+    margin-left: -10px;
+    background: var(--MIGold);
+    z-index: 1;
+    clear: both;
+}
+
+h1:after {
+    margin: 0;
+    padding: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 60px;
+    height: 100%;
+    background: var(--MIGold);
+    display: inline-block;
+    border-radius: 10px;
+    -webkit-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: skew(-45deg);
+    -ms-transform: skew(-45deg);
+    transform: skew(-45deg);
+    z-index: -1;
+}
+
 .img-burn {
     background:
             radial-gradient(var(--MIYellow)40%, black 90%),
             url("../assets/carbon-2.jpg") repeat;
     background-blend-mode: overlay, difference, lighten;
 }
+
+/*Gallery*/
+#gallery img {
+    width: 200px;
+}
+
 
 /*header*/
 #header {
@@ -289,33 +322,5 @@ body {
 
 /*rotating test area homepage*/
 
-h1 {
-    position: relative;
-    display: block;
-    margin-left: -10px;
-    background: var(--MIGold);
-    z-index: 1;
-    clear: both;
-}
 
-h1:after {
-    margin: 0;
-    padding: 0;
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -10px;
-    width: 60px;
-    height: 100%;
-    background: var(--MIGold);
-    display: inline-block;
-    border-radius: 10px;
-    -webkit-transform-origin: 0 100%;
-    -ms-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-    -webkit-transform: skew(-45deg);
-    -ms-transform: skew(-45deg);
-    transform: skew(-45deg);
-    z-index: -1;
-}
 
