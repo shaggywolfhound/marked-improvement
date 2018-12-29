@@ -66,8 +66,22 @@ h1:after {
 }
 
 /*Gallery*/
+#gallery .gallery-content {
+    width: 100%;
+}
+#gallery .gallery-content {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+#gallery .gallery-content .owl-carousel {
+    display: inline-block;
+}
+#gallery .gallery-content .owl-carousel div{
+    display: inline-block;
+}
 #gallery img {
-    width: 200px;
+    width: 300px;
 }
 
 
@@ -132,16 +146,20 @@ h1:after {
     background: #fff;
     line-height: 40px;
 }
-
+#nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
 #nav ul li.current {
     text-decoration: underline;
     font-weight: bold;
 }
-
 #nav ul li:hover {
     background: #000;
-    color: var(--MIYellow);
     cursor: pointer;
+}
+#nav ul li:hover a {
+    color: var(--MIYellow);
 }
 
 /*footer*/

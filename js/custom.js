@@ -8,37 +8,6 @@ $(function(){
 //todo convert to promise
 setTimeout(function(){
 
-//navigation
-    /*
-    $('#nav li.home').addClass('current');
-
-    $('#nav li').on('click', function () {
-        //todo add click on logo
-        let navClass = $(this).attr('class');
-        let content = $('#content');
-
-        content.addClass('animated fadeOutDown');
-        $('#nav li').removeClass('current');
-        $(this).addClass('current');
-
-        setTimeout(function() {
-            if (navClass.includes('reviews')){
-                content.load('./html/pages/reviews.html');
-            }else if(navClass.includes('gallery')){
-                content.load('./html/pages/gallery.html');
-            }else if(navClass.includes('contact-us')){
-                content.load('./html/pages/contact-us.html');
-            }else if(navClass.includes('\'about-us')){
-                content.load('./html/pages/about-us.html');
-            }else{
-                content.load('./html/pages/homepage.html');
-            }
-            content.removeClass('fadeOutDown');
-            content.addClass('fadeInUp');
-        },100);
-    });
-
-    */
     /*mobile navigation*/
     let navButton = $('#mobile-nav');
     let nav = $('#nav ul');
@@ -51,23 +20,44 @@ setTimeout(function(){
         //only apply to mobile view
         if ($(window).width() <= 768) {
             if(nav.is(":hidden")){
-                console.log('hidden');
                 nav.slideDown();
             }else{
-                console.log('showing');
                 nav.slideUp();
             }
         }
     });
 
-    //gallery load
-    const gallery = $('.gallery-content');
-    console.log(gallery);
-    if (gallery.length){
-        console.log('yay');
-    };
+    //inject gallery files
 
 },200);
+
+//gallery load
+const gallery = $('.gallery-content');
+if (gallery.length){
+    console.log('yay');
+}
+
+$(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        margin:10,
+        loop:true,
+        autoWidth:true,
+        items:4,
+        responsive:{
+            0:{
+                items:1
+            },
+            900:{
+                items:3
+            },
+            1200:{
+                items:4
+            }
+        }
+    })
+});
+
+
 
 // apply styles if re-sized/rotated
 $( window ).resize(function() {
